@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Roboto-Regular.ttf');
+}
+
+#content-blue-wrapper {
+  background-color: #7367F0;
+  width: 33px;
+  border: solid 1px #493cde;
+  height: 33px;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+@-webkit-keyframes content-not-recording {
+  0% {width: 92px;}
+  100% {width: 33px;}
+}
+
+@-webkit-keyframes content-recording {
+  0% {width: 33px;}
+  100% {width: 92px;}
+}
+
+#content-blue-wrapper.not-recording {
+  -webkit-animation: content-not-recording 0.5s ease-in;
+  animation: content-not-recording 0.5s ease-in;
+  width: 33px;
+}
+
+#content-blue-wrapper.recording {
+  -webkit-animation: content-recording 0.5s ease-in;
+  animation: content-recording 0.5s ease-in;
+  width: 92px;
+}
+
+#discard-wrapper {
+  background-color: #eee;
+  width: 33px;
+  border: solid 1px #cfcfcf;
+  height: 33px;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  z-index: 5;
+}
+
+#record-div {
+  position: absolute;
+  right: 10px;
+  top: -42px;
+  z-index: 3;
+  display: inline-flex;
+}
+
+#save-audio {
+  margin-right: 8px;
+}
+
+#record-img, #discard-audio, #save-audio {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: block;
+}
+
+#record-img, #discard-audio {
+  margin: auto;
+}
+
+#record-time {
+  height: 17px;
+  font-family: 'Roboto Regular';
+  font-size: 14px;
+  line-height: 1.21;
+  color: #ffffff;
+  margin-right: 16px;
+  z-index: 4;
+}
+
+@-webkit-keyframes hidden {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@-webkit-keyframes not-hidden {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.hidden {
+  -webkit-animation: hidden 0.5s ease-in;
+  animation: hidden 0.5s ease-in;
+  opacity: 0;
+  display: none !important;
+}
+
+.not-hidden {
+  -webkit-animation: not-hidden 0.5s ease-in;
+  animation: not-hidden 0.5s ease-in;
+  opacity: 1;
+}
+
+.GM .dL {
+  max-width: 376px !important;
+}
+
+.GM .dL .vI {
+  max-width: 280px !important;
+}
+
+.GM .dL .dQ {
+  width: 60px !important;
+}
